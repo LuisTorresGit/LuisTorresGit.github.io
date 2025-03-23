@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'MinhaFonte4';
-    src: url('../fonts/Odachi.otf') format('truetype');
+    src: url('../fonts/QORDHION\ DEMO.otf') format('truetype');
 }
 
 body {
@@ -59,13 +59,13 @@ body {
 }
 
 .texto-luix {
-    font-family: 'MinhaFonte3', sans-serif;
+    font-family: 'MinhaFonte4', sans-serif;
     font-size: 10vw;
 }
 
 .texto-inc {
     font-family: 'MinhaFonte3', sans-serif;
-    font-size: 4vw;
+    font-size: 9vw;
 }
 
 .sub-texto {
@@ -77,9 +77,9 @@ body {
 }
 
 .btn {
-    padding: 3vw 6vw;
-    font-size: 6vw;
-    background-color: #13262c;
+    padding: 1.5vw 3vw; /* Reduzi o padding */
+    font-size: 3vw; /* Reduzi o tamanho da fonte */
+    background-color: #10171a;
     color: white;
     border: none;
     border-radius: 3px;
@@ -106,8 +106,8 @@ body {
     }
 
     .btn {
-        font-size: 8vw;
-        padding: 4vw 8vw;
+        font-size: 5vw;
+        padding: 2vw 4vw;
     }
 }
 
@@ -123,7 +123,7 @@ body {
     }
 
     .btn {
-        font-size: 10vw;
-        padding: 5vw 10vw;
+        font-size: 6vw;
+        padding: 2.5vw 5vw;
     }
 }
