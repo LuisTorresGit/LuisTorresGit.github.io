@@ -3,18 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre & Portfólio</title>
-    <link href="./css/style2.css" rel="stylesheet">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="./css/style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-    <h1>Bem-vindo</h1>
-    <div class="section">
-        <h2>Sobre</h2>
-        <p>Meu nome é Luis Felippe Torres, teanho 19 anos e sou estudante de Ciência da Computação.</p>
-    </div>
-    <div class="section">
-        <h2>Portfólio</h2>
-        <p>Aqui estão alguns dos meus melhores trabalhos!</p>
-    </div>
+    <header>
+        <h1 class="fade-in">Olá, eu sou Luis Felippe</h1>
+        <p class="fade-in">Desenvolvedor | Designer | Criativo</p>
+    </header>
+    
+    <section class="portfolio">
+        <h2>Meu Trabalho</h2>
+        <div class="grid">
+            <a href="projeto1.html" class="card">
+                <img src="img/projeto1.jpg" alt="Projeto 1">
+            </a>
+            <a href="projeto2.html" class="card">
+                <img src="img/projeto2.jpg" alt="Projeto 2">
+            </a>
+            <a href="projeto3.html" class="card">
+                <img src="img/projeto3.jpg" alt="Projeto 3">
+            </a>
+            <a href="projeto4.html" class="card">
+                <img src="img/projeto4.jpg" alt="Projeto 4">
+            </a>
+            <a href="projeto5.html" class="card">
+                <img src="img/projeto5.jpg" alt="Projeto 5">
+            </a>
+            <a href="projeto6.html" class="card">
+                <img src="img/projeto6.jpg" alt="Projeto 6">
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section class="about">
+        <h2>Sobre Mim</h2>
+        <div class="info">
+            <div class="info-item">
+                <h3>Meus Estudos</h3>
+                <p>Formado em Engenharia de Computação pela Universidade Unianchieta Jundiaí.</p>
+                <p>--------------------------------------------.</p>
+            </div>
+            <div class="info-item">
+                <h3>Empresas onde trabalhei</h3>
+                <p>-------------------------------- (2020-2023)</p>
+                <p>-------------------------------- (2018-2020)</p>
+            </div>
+            <div class="info-item">
+                <h3>Linguagens de Programação</h3>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>HTML5 & CSS3</li>
+                    <li>MongoDB</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Entre em contato: <a href="mailto:luisfelippetorres23@gmail.com">luisfelippetorres23@gmail.com</a></p>
+    </footer>
+    
+    <script>
+        gsap.from(".fade-in", { duration: 1, opacity: 0, y: -50, stagger: 0.3 });
+        gsap.from(".card", { duration: 1, opacity: 0, scale: 0.8, stagger: 0.2 });
+    </script>
 </body>
 </html>
