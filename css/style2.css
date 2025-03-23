@@ -1,4 +1,3 @@
-/* Definindo uma fonte personalizada se for necessário */
 @font-face {
     font-family: 'MinhaFonte';
     src: url('caminho/para/sua/fonte.ttf') format('truetype');
@@ -14,17 +13,17 @@ body {
     text-align: center;
 }
 
-/* Estilizando o cabeçalho com fonte personalizada e degradê */
+/* Cabeçalho */
 header {
     padding: 50px 20px;
     background-image: 
-        url('../img/img-fundo-header.png'),  /* A imagem de fundo */
-        linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%); /* Degradê na parte inferior */
+        url('../img/img-fundo-header.png'),  
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%); 
     background-size: cover;
     background-position: center;
-    background-blend-mode: overlay; /* Para combinar a imagem com o degradê */
+    background-blend-mode: overlay; 
     color: #ffffff;
-    font-family: 'MinhaFonte', sans-serif; /* Definindo a fonte personalizada */
+    font-family: 'MinhaFonte', sans-serif; 
     position: relative;
 }
 
@@ -44,19 +43,22 @@ header p {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 250px); 
     gap: 20px;
     justify-items: center;
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
 .card {
     background: #363333;
-    padding: 30px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
-    width: 250px; /* Largura fixa */
-    height: 250px; /* Altura fixa, quadrada */
+    width: 100%; 
+    max-width: 250px; 
+    height: 250px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,18 +70,18 @@ header p {
 }
 
 .card img {
-    width: 100%; /* Garantir que a imagem ocupe todo o card */
-    height: 100%; /* Garantir que a imagem ocupe toda a altura do card */
-    object-fit: cover; /* Garantir que a imagem se ajuste sem deformação */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
 }
 
-/* Seção sobre mim */
+/* Seção Sobre Mim */
 .about {
     background-color: #1c1c1c;
     padding: 50px 20px;
-    border-radius: 15px; /* Bordas arredondadas para um visual moderno */
+    border-radius: 15px;
     margin: 30px auto;
-    max-width: 1200px; /* Para limitar o tamanho da seção */
+    max-width: 1200px; 
     color: white;
 }
 
@@ -87,7 +89,7 @@ header p {
     font-size: 2.5em;
     margin-bottom: 30px;
     text-align: center;
-    color: #680505; /* Cor de destaque */
+    color: #a83805; 
 }
 
 .info {
@@ -102,7 +104,7 @@ header p {
     padding: 30px;
     border-radius: 10px;
     width: 30%;
-    min-width: 250px; /* Garante que não fique muito estreito */
+    min-width: 250px; 
     text-align: left;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
@@ -110,7 +112,7 @@ header p {
 .info-item h3 {
     font-size: 1.8em;
     margin-bottom: 15px;
-    color: #680505;
+    color: #a83805;
 }
 
 .info-item p {
@@ -131,13 +133,37 @@ header p {
 
 .info-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
-/* Responsividade */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 250px); 
+    }
+}
+
 @media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(6, 250px); 
+    }
+
     .info-item {
-        width: 100%;
+        width: 100%; 
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em; 
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .portfolio h2 {
+        font-size: 1.8em;
     }
 }
 
@@ -147,7 +173,19 @@ header p {
     }
 
     .info-item {
-        padding: 20px;
+        padding: 15px;
+    }
+
+    .info-item h3 {
+        font-size: 1.5em;
+    }
+
+    .card {
+        height: 200px; 
+    }
+
+    footer p {
+        font-size: 1em;
     }
 }
 
@@ -157,7 +195,7 @@ footer {
 }
 
 footer a {
-    color: #680505; 
+    color: #a83805; 
     text-decoration: none; 
 }
 
